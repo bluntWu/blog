@@ -35,35 +35,35 @@ const NavBar = () => {
       id: 0,
       name: t.NAV.INDEX,
       to: BLOG.path || '/',
-      icon: <HomeIcon className='inline-block mb-1 h-5 w-5' />,
+      icon: <HomeIcon className='inline-block w-5 h-5 mb-1' />,
       show: true
     },
     {
       id: 1,
       name: t.NAV.NEWSLETTER,
       to: '/newsletter',
-      icon: <NewspaperIcon className='inline-block mb-1 h-5 w-5' />,
+      icon: <NewspaperIcon className='inline-block w-5 h-5 mb-1' />,
       show: BLOG.pagesShow.newsletter
     },
     {
       id: 2,
       name: t.NAV.NOTES,
       to: '/notes',
-      icon: <CollectionIcon className='inline-block mb-1 h-5 w-5' />,
+      icon: <CollectionIcon className='inline-block w-5 h-5 mb-1' />,
       show: BLOG.pagesShow.notes
     },
     {
       id: 3,
       name: t.NAV.PROJECTS,
       to: '/projects',
-      icon: <SparklesIcon className='inline-block mb-1 h-5 w-5' />,
+      icon: <SparklesIcon className='inline-block w-5 h-5 mb-1' />,
       show: BLOG.pagesShow.projects
     },
     {
       id: 4,
       name: t.NAV.SEARCH,
       to: '/search',
-      icon: <SearchIcon className='inline-block mb-1 h-5 w-5' />,
+      icon: <SearchIcon className='inline-block w-5 h-5 mb-1' />,
       show: true
     }
   ]
@@ -91,22 +91,22 @@ const NavBar = () => {
         )}
       </ul>
 
-      <div className='nav-func-btn block'>
+      <div className='block nav-func-btn'>
         <ThemeSwitcher />
         <LangSwitcher />
       </div>
 
       {/* Mobile Phone Menu */}
-      <div className='md:hidden mr-2 block '>
+      <div className='block mr-2 md:hidden '>
         <button
           type='button' aria-label='Menu'
           onClick={() => setShowMenu((showMenu) => !showMenu)}
-          className='hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer rounded-lg block p-2 -mr-3 md:pb-3'
+          className='block p-2 -mr-3 rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 md:pb-3'
         >
-          <MenuIcon className='inline-block mb-1 h-5 w-5' />
+          <MenuIcon className='inline-block w-5 h-5 mb-1' />
         </button>
         {showMenu && (
-          <div className='absolute right-0 w-40 mr-4 mt-2 bg-white dark:bg-gray-700 divide-y divide-gray-200 dark:divide-gray-600 rounded-md shadow-lg outline-none'>
+          <div className='absolute right-0 w-40 mt-2 mr-4 bg-white divide-y divide-gray-200 rounded-md shadow-lg outline-none dark:bg-gray-700 dark:divide-gray-600'>
             <div className='py-1'>
               {links.map(
                 (link) =>
@@ -114,7 +114,7 @@ const NavBar = () => {
                     <Link passHref key={link.id} href={link.to} scroll={false}>
                       <button
                         onClick={() => setShowMenu((showMenu) => !showMenu)}
-                        className='text-left hover:bg-gray-100 dark:hover:bg-gray-600 font-light block justify-between w-full px-4 py-2 leading-5'
+                        className='justify-between block w-full px-4 py-2 font-light leading-5 text-left hover:bg-gray-100 dark:hover:bg-gray-600'
                       >
                         {link.icon}
                         <span className='m-1'>{link.name}</span>
@@ -164,7 +164,7 @@ const Header = ({ navBarTitle, fullWidth }) => {
   }, [handler, sentinelRef])
   return (
     <>
-      <div className='observer-element h-4 md:h-12' ref={sentinelRef}></div>
+      <div className='h-4 observer-element md:h-12' ref={sentinelRef}></div>
       <div
         className={`sticky-nav m-auto w-full h-6 flex flex-row justify-between items-center mb-2 md:mb-12 py-8 bg-opacity-60 ${
           !fullWidth ? 'max-w-3xl px-4' : 'px-4 md:px-24'
@@ -175,7 +175,7 @@ const Header = ({ navBarTitle, fullWidth }) => {
         <div className='flex items-center'>
           <Link passHref href='/' scroll={false} aria-label={BLOG.title}>
             <motion.div>
-              <Logo className='h-6 hover:text-blue-500 dark:hover:text-blue-500 fill-current' />
+              <Logo className='h-6 fill-current hover:text-blue-500 dark:hover:text-blue-500' />
             </motion.div>
           </Link>
           {navBarTitle ? (
