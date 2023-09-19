@@ -4,7 +4,7 @@ const BLOG = {
   email: 'wukaiczy@gmail.com',
   link: 'https://cuicuishayu.vercel.app',
   newsletter: 'Notionic Weekly',
-  description: 'O ever youthful, O ever weeping',
+  description: '永远年轻，永远热泪盈眶',
   lang: 'zh-CN', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   timezone: 'Asia/Shanghai', // See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
   appearance: 'auto', // ['light', 'dark', 'auto'],
@@ -67,10 +67,10 @@ const BLOG = {
   },
   comment: {
     // support provider: utterances, supacomments
-    provider: '', // leave it empty if you don't need any comment plugin
+    provider: 'supacomments', // leave it empty if you don't need any comment plugin
     supaCommentsConfig: {
-      supabaseUrl: '', // The url of your Supabase instance
-      supabaseAnonKey: '' // The anonymous key of your Supabase instance
+      supabaseUrl: 'https://vyaphaiwtmdmgujepwqm.supabase.co', // The url of your Supabase instance
+      supabaseAnonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5YXBoYWl3dG1kbWd1amVwd3FtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQ3Njc2MjIsImV4cCI6MjAxMDM0MzYyMn0.a3lFoGjZ3Rhjxn4FrT8W469LYtK4E0JvZNn3i8L0OKQ' // The anonymous key of your Supabase instance
     },
     utterancesConfig: {
       repo: ''
