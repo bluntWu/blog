@@ -1,6 +1,4 @@
 import * as React from 'react'
-import img from '../../public/favicon.png'
-
 
 const Avatar = (props) => (
   <svg
